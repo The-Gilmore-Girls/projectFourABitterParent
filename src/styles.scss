@@ -311,7 +311,7 @@ form {
 
 .food {
   background-color: $color-orange;
-  height: calc(100vh - 28vh);
+  min-height: calc(100vh - 28vh);
   font-family: $font-secondary;
   display: flex;
   flex-direction: column;
@@ -331,12 +331,16 @@ form {
 .foodSection {
   display: flex;
   height: 100%;
+  width: 100%;
+  justify-content: center;
+  flex-wrap: wrap;
 
   .foodWrapper {
-    width: 50%;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
+    min-width: 33%;
 
     .foodTitle {
       text-transform: uppercase;
@@ -349,8 +353,8 @@ form {
     }
 
     .nutrient {
-      align-self: flex-start;
-      margin-left: calc(50% - 75px);
+      // align-self: flex-start;
+      // margin-left: calc(50% - 75px);
       padding: 5px 0;
     }
   }
