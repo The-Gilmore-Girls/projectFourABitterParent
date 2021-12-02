@@ -277,52 +277,23 @@ button {
   margin: 0 auto;
 }
 
-.break {
-  display: block;
-}
 
-// TYPOGRAPHY STYLING
+.header {
+  background-color: $color-purple;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  h1 {
+    font-family: $font-primary;
+    font-size: 5rem;
+    color: #5c6694;
+    font-weight: bold;
+    text-align: center;
+    span {
+      font-style: italic;
+      font-family: Georgia, "Times New Roman", Times, serif;
 
-h1 {
-  font-family: $font-primary;
-  font-size: 6rem;
-}
-
-p {
-  font-family: $font-secondary;
-  font-size: 1.4rem;
-}
-
-
-// HEADER
-
-header {
-  padding: 3rem 0;
-  min-height: 50vh;
-  .wrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border: 0.5rem solid $color-white;
-    border-right: 0.5rem solid $color-orange;
-    border-bottom: 0.5rem solid $color-orange;
-    background: linear-gradient(rgb(231, 231, 193) 1%, rgb(238, 236, 144) 100%);    
-    h1 {
-      margin: 1rem;
-      padding: 0.5rem 1rem 0;
-      font-weight: 800;
-      .h1Style {
-        text-decoration: underline;
-      }
-    }
-    p {
-      padding: 0.75rem 0 2.5rem;
-      width: 80%;
-      text-align: center;
-      span {
-        font-style: italic;
-      }
     }
   }
 }
@@ -366,20 +337,31 @@ form {
 // OUTPUT
 
 .food {
-  min-height: calc(100vh - 50vh - 30vh - 7vh);
+
+  background-color: $color-orange;
+  min-height: calc(100vh - 28vh);
+
   font-family: $font-secondary;
   text-align: center;
   padding-top: 1.5rem;
   p {
     font-weight: bold;
-    padding: 0.5rem;
+
+    padding: 10px;
+    span {
+      font-weight: bolder;
+      font-style: italic;
+      font-family: Georgia, "Times New Roman", Times, serif;
+    }
   }
 }
 
+.foodContainer {
+  display: flex;
+}
 
-// FOOD OUTPUT COMPONENT
+.foodSection {
 
-.foodOutputSection {
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -420,12 +402,19 @@ form {
       transform: rotate(90deg);
     }
     .nutrient {
-      padding: 0.25rem 0;
+
+      padding: 5px 0;
+
     }
   }
 }
 
-// SAVED PAIRS COMPONENT
+
+  .foodButtons {
+    display: flex;
+    justify-content: space-around;
+    height: 60%;
+
 
 .savedMain {
   display: flex;
@@ -483,31 +472,36 @@ form {
 
 .footer {
   display: flex;
-  align-items: center;
+
+}
+
+.savedUserFood,
+.savedAltFood {
   text-align: center;
-  height: 7vh;
-  position: relative;
-  ::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    opacity: 0.2;
-    z-index: -1;
-  }
+  text-transform: uppercase;
   p {
-    font-size: 1rem;
+    padding: 5px;
   }
 }
 
-// MEDIA QUERIES
+.savedUserPic,
+.savedAltPic {
+  height: 200px;
+  width: 200px;
+  border-radius: 30px;
+}
 
-@media (max-width: 1250px) {
-  h1 {
-    font-size: 4.5rem;
-  }
+.savedUserPic img,
+.savedAltPic img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 30px;
+}
+
+.savedUserPic img {
+  border-radius: 30px 0 0 30px;
+
 }
 
 @media (max-width: 1000px) {
@@ -555,12 +549,23 @@ form {
     }
   }
 
-  form {
-    input {
-      padding: 0.5rem 1rem;
-      font-size: 1rem;
-    }
-  }
+
+.homeButton {
+  width: 150px;
+  margin: 15px auto;
+  font-style: none;
+  background-color: #53c27f;
+  padding: 6px 18px;
+  border-radius: 12px;
+  color: rgb(34, 34, 34);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #19362591;
+  font-family: $font-secondary;
+  cursor: pointer;
+}
+
 
   .mainButtons {
     flex-direction: column;
@@ -655,89 +660,102 @@ form {
   justify-content: center;
   h2 {
     font-family: $font-secondary;
+
+    font-size: 38px;
+    color: midnightblue;
+    padding: 10px 0;
+  }
+}
+
+// Media queries
+
+@media (max-width: 1200px) {
+  .foodSection .foodWrapper .nutrient {
+    margin: 0;
+    align-self: center;
+  }
+}
+
+@media (max-width: 830px) {
+  .foodSection .foodWrapper {
+    padding-bottom: 35px;
+  }
+}
+
+@media (max-width: 650px) {
+  .mainButtons {
+    padding-top: 15px;
+  }
+  .food {
+    padding-top: 15px;
+  }
+}
+
+
+@media (max-width: 1000px) {
+
+}
+
+@media (max-width: 830px) {
+
+}
+
+@media (max-width: 700px) {
+  h1 {
+
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 3rem;
+  }
+  .mainButtons {
+    flex-direction: column;
+    align-items: center;
+  }
+  .foodContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 430px) {
+  .header h1 {
+    font-size: 3rem;
+    padding: 20px 0;
+  }
+
+  .footer {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 320px) {
+  .header h1 {
     font-size: 2rem;
-    padding: 0.3rem 0;
+    padding: 24px 0;
   }
-  .homeButton {
-    margin-top: 0.75rem;
+
+  form input {
+    padding: 0;
   }
-  ul {
-    .savedPair {
-      .savedUserFood,
-      .savedAltFood {
-        p {
-        display: none;
-        }
-      }
-      .savedUserPic,
-      .savedAltPic {
-        height: 5rem;
-        width: 5rem;
-      }
-    }
+
+  .foodSection .foodButtons {
+    flex-direction: column;
+    align-items: center;
   }
 }
 
-.foodOutputSection {
-  .foodButton {
-    padding: 0.55rem;
+@media (max-width: 420px) {
+  .savedUserFood p,
+  .savedAltFood p {
+    display: none;
+  }
+  .savedUserPic,
+  .savedAltPic {
+    height: 120px;
+    width: 120px;
   }
 }
 
-footer {
-  margin-top: 2rem;
-}
-}
-
-// @media (max-width: 480px) {
-//   h1 {
-//     font-size: 3rem;
-//   }
-//   .mainButtons {
-//     flex-direction: column;
-//     align-items: center;
-//   }
-//   .foodContainer {
-//     flex-direction: column;
-//     align-items: center;
-//   }
-// }
-
-// @media (max-width: 430px) {
-//   .header h1 {
-//     font-size: 3rem;
-//     padding: 20px 0;
-//   }
-
-//   .footer {
-//     padding: 15px;
-//   }
-// }
-
-// @media (max-width: 320px) {
-//   .header h1 {
-//     font-size: 2rem;
-//     padding: 24px 0;
-//   }
-
-//   form input {
-//     padding: 0;
-//   }
-
-//   .foodSection .foodButtons {
-//     flex-direction: column;
-//     align-items: center;
-//   }
-// }
-
-// @media (max-width: 420px) {
-//   .savedUserFood p,
-//   .savedAltFood p {
-//     display: none;
-//   }
-//   .savedUserPic,
-//   .savedAltPic {
-//     height: 120px;
-//     width: 120px;
-//   }
-// }

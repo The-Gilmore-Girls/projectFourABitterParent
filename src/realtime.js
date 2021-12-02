@@ -5,17 +5,13 @@ import { getDatabase } from "firebase/database";
 // Firebase configuration
 const firebaseConfig = {
 
-  apiKey: "AIzaSyBgqrMFqBc8q8mmrC4pzU6WiD75NtsX_HU",
-
-  authDomain: "a-bitter-parent-augmented.firebaseapp.com",
-
-  projectId: "a-bitter-parent-augmented",
-
-  storageBucket: "a-bitter-parent-augmented.appspot.com",
-
-  messagingSenderId: "181994276915",
-
-  appId: "1:181994276915:web:e29cfc15be81e0ba943b46"
+  apiKey: "AIzaSyAJu5VEnfJ_BGyFokoIlHC0P6G7GBhjU7k",
+  authDomain: "a-bitter-parent.firebaseapp.com",
+  databaseURL: "https://a-bitter-parent-default-rtdb.firebaseio.com",
+  projectId: "a-bitter-parent",
+  storageBucket: "a-bitter-parent.appspot.com",
+  messagingSenderId: "564251576224",
+  appId: "1:564251576224:web:5f85d505da4f627dc2c6c5",
 
 };
 
