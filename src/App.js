@@ -31,6 +31,7 @@ function App() {
 
     // 1st API call: Takes user input to use as query and returns 2 arrays (Common & Branded) of 20 items. 
 
+
     // 2nd API call: We use the first item in the common food array as our query for this call to get nutrients data on the user searched food.
 
     //  3rd API call: We take the sugar from the user selected food and make this call with a random letter value to get a random suggestion food with either less than 5 or 10g of sugar
@@ -183,6 +184,7 @@ function App() {
   };
 
   return (
+
     <Router>
       <div className="wrapper">
 
@@ -197,6 +199,7 @@ function App() {
         <Route exact path="/">
           <section className="search">
 
+
             <SearchForm
               userText={userText}
               handleChange={handleChange}
@@ -210,10 +213,12 @@ function App() {
                 <button className="foodButton">View Saved Pairs</button>
               </Link>
 
+
               <button className="foodButton" onClick={onClear}>
                 Clear
               </button>
             </div>
+
           </section>
 
           <main className="food">
@@ -224,11 +229,13 @@ function App() {
               parents can feel good about!
             </p>
 
+
             <FoodOutput
               userFood={userFood}
               altFood={altFood}
               savedPair={savedPair}
             />
+
           </main>
 
           <footer className="footer">
@@ -240,13 +247,16 @@ function App() {
         {/* SAVED PAIRS ROUTE */}
         <Route path="/savedPairs">
           <main className="savedMain">
+
             <h2>Your Saved Pairs</h2>
 
             <Link className="homeLink" to="/">
               <button className="homeButton">Home</button>
             </Link>
 
+
             {/* DISPLAY SAVED PAIRS FROM STATE */}
+
             <ul>
               {food.map((pair) => {
                 return (
@@ -272,9 +282,11 @@ function App() {
                 );
               })}
             </ul>
+
           </main>
         </Route>
       </div>
+
     </Router>
   );
 }

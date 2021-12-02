@@ -1,3 +1,5 @@
+// SETUP
+
 html {
   line-height: 1.15;
   -ms-text-size-adjust: 100%;
@@ -229,24 +231,44 @@ html {
 }
 @import url("https://fonts.googleapis.com/css2?family=Maitree&family=Montserrat&display=swap%27");
 
-// GENERAL
-h1 {
-  margin: 0;
-}
-
-// TYPOGRAPHY
+// SASS - TYPOGRAPHY
 
 $font-primary: "Montserrat", sans-serif;
 $font-secondary: "Maitree", serif;
 
-// COLORS
 
-$color-green: #8df8b7;
+// SASS - COLORS
+
+$color-green: #a3f1bd;
+$color-dark-green: #71dd9c;
 $color-purple: #aebdff;
+$color-dark-purple: #708bff;
 $color-orange: #ffb454;
+$color-white: #ffffffef;
+$color-black: #363636;
+$color-grey: #9a9b9a;
 
-html {
-  background-color: rgb(245, 239, 239);
+
+// GENERAL STYLING
+
+body {
+  background: linear-gradient(270deg, $color-white 1%,  $color-purple 12%, $color-purple 88%, $color-white 100%);
+}
+
+h1, p {
+  margin: 0;
+  color: $color-black;
+}
+
+button {
+  background: linear-gradient(rgb(143, 197, 143) 1%, lightgreen 100%);
+  padding: 0.5rem 2rem;
+  border-radius: 0.5rem;
+  border: 0.1rem solid $color-grey;
+  font-family: $font-secondary;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: 0.2s;
 }
 
 .wrapper {
@@ -254,6 +276,7 @@ html {
   width: 85%;
   margin: 0 auto;
 }
+
 
 .header {
   background-color: $color-purple;
@@ -270,12 +293,15 @@ html {
     span {
       font-style: italic;
       font-family: Georgia, "Times New Roman", Times, serif;
+
     }
   }
 }
 
+// INPUT
+
 .search {
-  background-color: $color-green;
+  min-height: 30vh;
 }
 
 form {
@@ -283,44 +309,44 @@ form {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-top: 22px;
-
+  padding-top: 1rem;
   input {
-    border: 3px solid #19362591;
-    border-radius: 1rem;
-    background-color: #caf8dc;
-    padding: 4px 34px;
+    padding: 0.5rem 3.5rem;
     text-align: center;
-    color: #5a5a5a;
-    font-family: $font-secondary;
+    border: 0.2rem solid $color-orange;
+    border-radius: 1rem;
+    color: $color-black;
+    font-size: 1.4rem;
   }
   .submitButton {
-    font-style: none;
-    background-color: #53c27f;
-    margin-top: 6px;
-    padding: 6px 18px;
-    border-radius: 12px;
-    color: rgb(34, 34, 34);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 2px solid #19362591;
-    font-family: $font-secondary;
-    cursor: pointer;
+    margin-top: 0.7rem;
   }
 }
 
+.mainButtons {
+  display: flex;
+  justify-content: space-around;
+  .foodButton {
+    width: 14rem;
+    margin: 1.5rem 0;
+    padding: 0.5rem 0;
+  }
+}
+
+
+// OUTPUT
+
 .food {
+
   background-color: $color-orange;
   min-height: calc(100vh - 28vh);
+
   font-family: $font-secondary;
-  display: flex;
-  flex-direction: column;
   text-align: center;
-  padding-top: 28px;
+  padding-top: 1.5rem;
   p {
-    color: #6b2718;
     font-weight: bold;
+
     padding: 10px;
     span {
       font-weight: bolder;
@@ -335,77 +361,118 @@ form {
 }
 
 .foodSection {
+
   display: flex;
   flex-direction: column;
   height: 100%;
-
+  margin-top: 2rem;
+  .foodButtons {
+    display: flex;
+    justify-content: space-around;
+    .foodButton {
+      background-color: linear-gradient(rgb(143, 197, 143) 1%, lightgreen 100%);
+      border: 0.155rem solid green;
+    }
+  }
+  .foodContainer {
+    display: flex;
+  }
   .foodWrapper {
     width: 50%;
     display: flex;
     flex-direction: column;
     align-items: center;
-
+    margin: 2rem 0;
     .foodTitle {
       text-transform: uppercase;
       font-size: 25px;
       padding: 15px 0;
     }
-
+    .foodPicture {
+      height: 7.5rem;
+      width: 7.5rem;
+    }
+    .foodPicture img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 1.5rem;
+    }
     .fa-pause-circle {
       transform: rotate(90deg);
     }
-
     .nutrient {
+
       padding: 5px 0;
+
     }
   }
+}
+
 
   .foodButtons {
     display: flex;
     justify-content: space-around;
     height: 60%;
 
-    .foodButton {
-      width: 150px;
-      margin-bottom: 10px;
-      font-style: none;
-      background-color: #53c27f;
-      margin-top: 6px;
-      padding: 6px 18px;
-      border-radius: 12px;
-      color: rgb(34, 34, 34);
+
+.savedMain {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+  h2 {
+    font-family: $font-secondary;
+    font-size: 2rem;
+    padding: 0.3rem 0;
+  }
+  .homeButton {
+    margin-top: 0.75rem;
+  }
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 1.5rem;
+    margin: 2rem 0;
+    .savedPair {
       display: flex;
-      justify-content: center;
-      align-items: center;
-      border: 2px solid #19362591;
-      font-family: $font-secondary;
-      cursor: pointer;
+      .savedUserFood,
+      .savedAltFood {
+        text-align: center;
+        text-transform: capitalize;
+        p {
+        padding: 0.8rem 0;
+        font-size: 1rem;
+        }
+      }
+    .savedUserPic,
+    .savedAltPic {
+      height: 10rem;
+      width: 10rem;
+    }
+    .savedUserPic img,
+    .savedAltPic img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .savedUserPic img {
+      border-radius: 30px 0 0 30px;
+    }
+    .savedAltPic img {
+      border-radius: 0 30px 30px 0;
+      border-left: 0.15rem solid black;
+    }
     }
   }
-
-  .foodPicture {
-    height: 150px;
-    width: 150px;
-  }
-
-  .foodPicture img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 30px;
-  }
 }
 
-ul {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  gap: 30px;
-  margin: 40px 0;
-}
+// FOOTER
 
-.savedPair {
+.footer {
   display: flex;
+
 }
 
 .savedUserFood,
@@ -434,16 +501,54 @@ ul {
 
 .savedUserPic img {
   border-radius: 30px 0 0 30px;
+
 }
 
-.savedAltPic img {
-  border-radius: 0 30px 30px 0;
-  border-left: 2px solid black;
+@media (max-width: 1000px) {
+  // .foodSection .foodWrapper {
+  //   padding-bottom: 35px;
+  // }
+  
+  header {
+    min-height: 40vh;
+    .wrapper {
+      h1 {
+        font-size: 3.2rem;
+      }
+      p {
+        font-size: 1.2rem;
+        padding: 0.1rem 0 1.5rem;
+      }
+    }
+  }
 }
 
-.homeLink {
-  text-decoration: none;
-}
+@media (max-width: 720px) {
+  // .mainButtons {
+  //   padding-top: 15px;
+  // }
+  // .food {
+  //   padding-top: 15px;
+  // }
+  header {
+    // height: 0;
+    padding-bottom: 2rem;
+    .wrapper {
+      h1 {
+        font-size: 2.5rem;
+        // width: 100%;
+        padding: 0;
+        .blockMedia {
+          display: block;
+        }
+      }
+      p {
+        font-size: 1rem;
+        padding: 0.1rem 0 1.5rem;
+      }
+    }
+  }
+
 
 .homeButton {
   width: 150px;
@@ -461,45 +566,101 @@ ul {
   cursor: pointer;
 }
 
-.mainButtons {
-  display: flex;
-  justify-content: space-around;
-  .foodButton {
-    width: 220px;
-    margin-bottom: 10px;
-    font-style: none;
-    background-color: #53c27f;
-    margin-top: 6px;
-    padding: 6px 18px;
-    border-radius: 12px;
-    color: rgb(34, 34, 34);
-    display: flex;
-    justify-content: center;
+
+  .mainButtons {
+    flex-direction: column;
     align-items: center;
-    border: 2px solid #19362591;
-    font-family: $font-secondary;
-    cursor: pointer;
+    gap: 1rem;
+    margin-top: 2.5rem;
+    .foodButton {
+      margin: 0;
+      padding: 0.5rem 0;
+    }
   }
-}
 
-.pairsLink {
-  text-decoration: none;
-}
+  // .savedMain {
+  //   min-height: 50vh;
+  //   ul {  
+  //     .savedUserPic,
+  //     .savedAltPic {
+  //       height: 4rem;
+  //       width: 4rem;
+  //     }
+  //   }
+  // }
 
-.footer {
-  background-color: $color-purple;
-  text-align: center;
-}
+  // .food {
+  //   flex-direction: column;
+  // }
+
+  .foodOutputSection {
+    margin-top: 3rem;
+    .foodButton {
+      padding: 0.5rem 1.5rem;
+    }
+  }
+
+  .foodContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding: 0;
+    margin: 2rem 0;
+    .foodWrapper {
+      margin: 0;
+    }
+  }
 
 .savedMain {
-  background-color: hotpink;
   display: flex;
   text-align: center;
   flex-direction: column;
   justify-content: center;
   h2 {
-    background-color: rgb(255, 176, 215);
     font-family: $font-secondary;
+    font-size: 2rem;
+    padding: 0.3rem 0;
+  }
+  .homeButton {
+    margin-top: 0.75rem;
+  }
+  ul {
+    gap: 2rem;
+    .savedPair {
+      .savedUserFood,
+      .savedAltFood {
+        p {
+        display: none;
+        }
+      }
+      .savedUserPic,
+      .savedAltPic {
+        height: 8rem;
+        width: 8rem;
+      }
+    }
+  }
+}
+}
+
+
+@media (max-width: 480px) {
+
+.mainButtons {
+  .foodButton {
+    width: 11rem;
+  }
+}
+
+.savedMain {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+  h2 {
+    font-family: $font-secondary;
+
     font-size: 38px;
     color: midnightblue;
     padding: 10px 0;
@@ -597,3 +758,4 @@ ul {
     width: 120px;
   }
 }
+

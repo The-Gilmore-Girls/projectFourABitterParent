@@ -272,12 +272,24 @@ html {
   font-size: 125%;
 }
 
-h1 {
-  margin: 0;
+body {
+  background: linear-gradient(270deg, #ffffffef 1%, #aebdff 12%, #aebdff 88%, #ffffffef 100%);
 }
 
-html {
-  background-color: #f5efef;
+h1, p {
+  margin: 0;
+  color: #363636;
+}
+
+button {
+  background: linear-gradient(#8fc58f 1%, lightgreen 100%);
+  padding: 0.5rem 2rem;
+  border-radius: 0.5rem;
+  border: 0.1rem solid #9a9b9a;
+  font-family: "Maitree", serif;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: 0.2s;
 }
 
 .wrapper {
@@ -286,27 +298,49 @@ html {
   margin: 0 auto;
 }
 
-.header {
-  background-color: #aebdff;
+.break {
+  display: block;
+}
+
+h1 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 6rem;
+}
+
+p {
+  font-family: "Maitree", serif;
+  font-size: 1.4rem;
+}
+
+header {
+  padding: 3rem 0;
+  min-height: 50vh;
+}
+header .wrapper {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  border: 0.5rem solid #ffffffef;
+  border-right: 0.5rem solid #ffb454;
+  border-bottom: 0.5rem solid #ffb454;
+  background: linear-gradient(#e7e7c1 1%, #eeec90 100%);
 }
+
 .header h1 {
   font-family: "Montserrat", sans-serif;
   font-size: 5rem;
   color: #5c6694;
   font-weight: bold;
+
   text-align: center;
 }
-.header h1 span {
+header .wrapper p span {
   font-style: italic;
-  font-family: Georgia, "Times New Roman", Times, serif;
 }
 
 .search {
-  background-color: #8df8b7;
+  min-height: 30vh;
 }
 
 form {
@@ -314,18 +348,18 @@ form {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-top: 22px;
+  padding-top: 1rem;
 }
 form input {
-  border: 3px solid #19362591;
-  border-radius: 1rem;
-  background-color: #caf8dc;
-  padding: 4px 34px;
+  padding: 0.5rem 3.5rem;
   text-align: center;
-  color: #5a5a5a;
-  font-family: "Maitree", serif;
+  border: 0.2rem solid #ffb454;
+  border-radius: 1rem;
+  color: #363636;
+  font-size: 1.4rem;
 }
 form .submitButton {
+
   font-style: none;
   background-color: #53c27f;
   margin-top: 6px;
@@ -346,18 +380,116 @@ form .submitButton {
   font-family: "Maitree", serif;
   display: flex;
   flex-direction: column;
+
   text-align: center;
-  padding-top: 28px;
+  padding-top: 1.5rem;
 }
 .food p {
-  color: #6b2718;
   font-weight: bold;
+
   padding: 10px;
+
 }
-.food p span {
-  font-weight: bolder;
-  font-style: italic;
-  font-family: Georgia, "Times New Roman", Times, serif;
+
+.foodOutputSection {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  margin-top: 2rem;
+}
+.foodOutputSection .foodButtons {
+  display: flex;
+  justify-content: space-around;
+}
+.foodOutputSection .foodButtons .foodButton {
+  background-color: linear-gradient(#8fc58f 1%, lightgreen 100%);
+  border: 0.155rem solid green;
+}
+.foodOutputSection .foodContainer {
+  display: flex;
+}
+.foodOutputSection .foodWrapper {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2rem 0;
+}
+.foodOutputSection .foodWrapper .foodTitle {
+  text-transform: uppercase;
+  font-size: 25px;
+  padding: 15px 0;
+}
+.foodOutputSection .foodWrapper .foodPicture {
+  height: 7.5rem;
+  width: 7.5rem;
+}
+.foodOutputSection .foodWrapper .foodPicture img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 1.5rem;
+}
+.foodOutputSection .foodWrapper .fa-pause-circle {
+  transform: rotate(90deg);
+}
+.foodOutputSection .foodWrapper .nutrient {
+  padding: 0.25rem 0;
+}
+
+.savedMain {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.savedMain h2 {
+  font-family: "Maitree", serif;
+  font-size: 2rem;
+  padding: 0.3rem 0;
+}
+.savedMain .homeButton {
+  margin-top: 0.75rem;
+}
+.savedMain ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+.savedMain ul .savedPair {
+  display: flex;
+}
+.savedMain ul .savedPair .savedUserFood,
+.savedMain ul .savedPair .savedAltFood {
+  text-align: center;
+  text-transform: capitalize;
+}
+.savedMain ul .savedPair .savedUserFood p,
+.savedMain ul .savedPair .savedAltFood p {
+  padding: 0.8rem 0;
+  font-size: 1rem;
+}
+.savedMain ul .savedPair .savedUserPic,
+.savedMain ul .savedPair .savedAltPic {
+  height: 10rem;
+  width: 10rem;
+}
+.savedMain ul .savedPair .savedUserPic img,
+.savedMain ul .savedPair .savedAltPic img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.savedMain ul .savedPair .savedUserPic img {
+  border-radius: 30px 0 0 30px;
+}
+.savedMain ul .savedPair .savedAltPic img {
+  border-radius: 0 30px 30px 0;
+  border-left: 0.15rem solid black;
 }
 
 .foodContainer {
@@ -512,6 +644,7 @@ ul {
 }
 
 .footer {
+
   background-color: #aebdff;
   text-align: center;
 }
@@ -554,11 +687,13 @@ ul {
 @media (max-width: 480px) {
   h1 {
     font-size: 3rem;
+
   }
 
   .mainButtons {
     flex-direction: column;
     align-items: center;
+
   }
 
   .foodContainer {
@@ -601,5 +736,6 @@ ul {
 .savedAltPic {
     height: 120px;
     width: 120px;
+
   }
 }/*# sourceMappingURL=styles.css.map */
