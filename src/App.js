@@ -14,11 +14,16 @@ import { randomSugar } from "./utils";
 
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faLemon } from '@fortawesome/free-solid-svg-icons'
+
+
 function App() {
   const [userText, setUserText] = useState("");
   const [userFood, setUserFood] = useState({});
   const [altFood, setAltFood] = useState({});
   const [food, setFood] = useState([]);
+
 
   //  Store user input in state
   const handleChange = (event) => {
@@ -191,6 +196,7 @@ function App() {
           <h1>
             A Bitter Parent
           </h1>
+          <FontAwesomeIcon icon={faLemon}></FontAwesomeIcon>
         </header>
 
         {/* HOME - DISPLAY ON LOAD */}
