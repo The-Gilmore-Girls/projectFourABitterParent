@@ -228,6 +228,7 @@ html {
   font-size: 125%;
 }
 @import url("https://fonts.googleapis.com/css2?family=Maitree&family=Montserrat&display=swap%27");
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
 
 // GENERAL
 h1 {
@@ -236,12 +237,12 @@ h1 {
 
 // TYPOGRAPHY
 
-$font-primary: "Montserrat", sans-serif;
+$font-primary: 'Fredoka One', cursive;
 $font-secondary: "Maitree", serif;
 
 // COLORS
 
-$color-green: #8df8b7;
+$color-green: #237a46;
 $color-purple: #aebdff;
 $color-orange: #ffb454;
 
@@ -264,7 +265,7 @@ html {
   h1 {
     font-family: $font-primary;
     font-size: 5rem;
-    color: #5c6694;
+    color: black;
     font-weight: bold;
     text-align: center;
     span {

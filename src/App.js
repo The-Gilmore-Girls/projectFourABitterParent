@@ -189,7 +189,7 @@ function App() {
         {/* HEADER */}
         <header className="header">
           <h1>
-            A <span>Bitter</span> Parent
+            A Bitter Parent
           </h1>
         </header>
 
