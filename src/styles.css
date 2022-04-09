@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Maitree&family=Montserrat&display=swap%27");
 @import url("https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
 html {
   line-height: 1.15;
   -ms-text-size-adjust: 100%;
@@ -288,11 +289,12 @@ html {
 }
 
 .header {
-  background-color: #aebdff;
+  background-color: #dce92c;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 60px;
 }
 .header h1 {
   font-family: "Fredoka One", cursive;
@@ -300,14 +302,17 @@ html {
   color: black;
   font-weight: bold;
   text-align: center;
+  padding: 0 0 28px 0;
 }
-.header h1 span {
-  font-style: italic;
-  font-family: Georgia, "Times New Roman", Times, serif;
+.header svg {
+  height: 68px;
+  border: #000 solid 10px;
+  border-radius: 4px 25px;
+  padding: 18px 22px;
 }
 
 .search {
-  background-color: #237a46;
+  background-color: #5cbecf;
 }
 
 form {
@@ -315,16 +320,16 @@ form {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-top: 22px;
+  padding: 30px 30px;
 }
 form input {
   border: 3px solid rgba(25, 54, 37, 0.568627451);
-  border-radius: 1rem;
-  background-color: #caf8dc;
-  padding: 4px 34px;
+  border-radius: 4px 25px;
+  background-color: #fff;
+  padding: 14px 34px;
   text-align: center;
   color: #5a5a5a;
-  font-family: "Maitree", serif;
+  font-family: "Fredoka One", cursive;
 }
 form .submitButton {
   font-style: none;
@@ -337,14 +342,14 @@ form .submitButton {
   justify-content: center;
   align-items: center;
   border: 2px solid rgba(25, 54, 37, 0.568627451);
-  font-family: "Maitree", serif;
+  font-family: "Open Sans", sans-serif;
   cursor: pointer;
 }
 
 .food {
-  background-color: #ffb454;
+  background-color: #f08e0d;
   min-height: 72vh;
-  font-family: "Maitree", serif;
+  font-family: "Open Sans", sans-serif;
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -405,7 +410,7 @@ form .submitButton {
   justify-content: center;
   align-items: center;
   border: 2px solid rgba(25, 54, 37, 0.568627451);
-  font-family: "Maitree", serif;
+  font-family: "Open Sans", sans-serif;
   cursor: pointer;
 }
 .foodSection .foodPicture {
@@ -483,7 +488,7 @@ ul {
   justify-content: center;
   align-items: center;
   border: 2px solid rgba(25, 54, 37, 0.568627451);
-  font-family: "Maitree", serif;
+  font-family: "Open Sans", sans-serif;
   cursor: pointer;
 }
 
@@ -504,7 +509,7 @@ ul {
   justify-content: center;
   align-items: center;
   border: 2px solid rgba(25, 54, 37, 0.568627451);
-  font-family: "Maitree", serif;
+  font-family: "Open Sans", sans-serif;
   cursor: pointer;
 }
 
@@ -513,7 +518,7 @@ ul {
 }
 
 .footer {
-  background-color: #aebdff;
+  background-color: #dce92c;
   text-align: center;
 }
 
@@ -526,7 +531,7 @@ ul {
 }
 .savedMain h2 {
   background-color: rgb(255, 176, 215);
-  font-family: "Maitree", serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 38px;
   color: midnightblue;
   padding: 10px 0;

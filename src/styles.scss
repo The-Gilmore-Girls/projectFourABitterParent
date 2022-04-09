@@ -229,6 +229,7 @@ html {
 }
 @import url("https://fonts.googleapis.com/css2?family=Maitree&family=Montserrat&display=swap%27");
 @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 
 // GENERAL
 h1 {
@@ -238,13 +239,13 @@ h1 {
 // TYPOGRAPHY
 
 $font-primary: 'Fredoka One', cursive;
-$font-secondary: "Maitree", serif;
+$font-secondary: 'Open Sans', sans-serif;
 
 // COLORS
 
-$color-green: #237a46;
-$color-purple: #aebdff;
-$color-orange: #ffb454;
+$color-green: #5cbecf;
+$color-purple: #dce92c;
+$color-orange: #f08e0d;
 
 html {
   background-color: rgb(245, 239, 239);
@@ -262,16 +263,20 @@ html {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 60px;
   h1 {
     font-family: $font-primary;
     font-size: 5rem;
     color: black;
     font-weight: bold;
     text-align: center;
-    span {
-      font-style: italic;
-      font-family: Georgia, "Times New Roman", Times, serif;
-    }
+    padding: 0 0 28px 0;
+  }
+  svg {
+    height: 68px;
+    border: #000 solid 10px;
+    border-radius: 4px 25px;
+    padding: 18px 22px;
   }
 }
 
@@ -284,16 +289,15 @@ form {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-top: 22px;
-
+  padding: 30px 30px;
   input {
     border: 3px solid #19362591;
-    border-radius: 1rem;
-    background-color: #caf8dc;
-    padding: 4px 34px;
+    border-radius: 4px 25px;
+    background-color: #fff;
+    padding: 14px 34px;
     text-align: center;
     color: #5a5a5a;
-    font-family: $font-secondary;
+    font-family: $font-primary;
   }
   .submitButton {
     font-style: none;

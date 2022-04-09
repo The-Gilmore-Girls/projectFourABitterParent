@@ -197,6 +197,7 @@ function App() {
             A Bitter Parent
           </h1>
           <FontAwesomeIcon icon={faLemon}></FontAwesomeIcon>
+          
         </header>
 
         {/* HOME - DISPLAY ON LOAD */}
@@ -208,7 +209,7 @@ function App() {
               handleChange={handleChange}
               handleSubmit={handleSubmit}
             />
-
+            <p>Hey parents! Enter the sweet treat your kids are craving into the search form above, and we’ll replay with a healthy alternative tout suite!</p>
             <div className="mainButtons">
 
               {/* LINK TO SAVED PAIRS */}
@@ -223,12 +224,7 @@ function App() {
           </section>
 
           <main className="food">
-            <p>
-              {" "}
-              <span>Hey kids!</span> Enter a sweet treat you’re craving into the
-              search form above and we’ll suggest something that you and your
-              parents can feel good about!
-            </p>
+
 
             <FoodOutput
               userFood={userFood}
