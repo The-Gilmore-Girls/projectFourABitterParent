@@ -245,7 +245,7 @@ function App() {
             <h2>Your Saved Pairs</h2>
 
             <Link className="homeLink" to="/">
-              <button className="homeButton">Home</button>
+              <button className="homeButton">HOME</button>
             </Link>
 
             {/* DISPLAY SAVED PAIRS FROM STATE */}

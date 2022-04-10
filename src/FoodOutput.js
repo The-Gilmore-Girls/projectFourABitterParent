@@ -30,6 +30,7 @@ const FoodOutput = (props) => {
         {/* USER SELECTION */}
         {props.altFood.food_name ? (
           <div className="foodWrapper">
+            <h2 className="foodTitle">You're craving:</h2>
             <h2 className="foodTitle">{props.userFood.food_name}</h2>
             <div className="foodPicture">
               {props.userFood.photo ? (
@@ -66,6 +67,7 @@ const FoodOutput = (props) => {
         {/* SUGGESTED FOOD */}
         {props.altFood.food_name ? (
           <div className="foodWrapper">
+            <h2 className="foodTitle">But you should have:</h2>
             <h2 className="foodTitle">{props.altFood.food_name}</h2>
             <div className="foodPicture">
               {props.altFood.photo ? (
