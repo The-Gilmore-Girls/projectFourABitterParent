@@ -16,11 +16,11 @@ const FoodOutput = (props) => {
       {props.altFood.food_name ? (
         <div className="foodButtons">
           <button className="foodButton" onClick={props.savedPair}>
-            Save Pair
+            SAVE PAIR
           </button>
 
           <button className="foodButton" onClick={handleClick}>
-            Compare
+            COMPARE
           </button>
         </div>
       ) : null}
