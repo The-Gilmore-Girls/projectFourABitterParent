@@ -313,6 +313,13 @@ html {
 
 .search {
   background-color: #5cbecf;
+  padding: 48px 0;
+}
+.search p {
+  font-family: "Fredoka One", cursive;
+  font-size: 1.2rem;
+  text-align: center;
+  padding: 12px 44px;
 }
 
 form {
@@ -323,12 +330,13 @@ form {
   padding: 30px 30px;
 }
 form input {
-  border: 3px solid rgba(25, 54, 37, 0.568627451);
+  border: 6px solid #000;
   border-radius: 4px 25px;
   background-color: #fff;
   padding: 14px 34px;
+  margin: 28px 0;
   text-align: center;
-  color: #5a5a5a;
+  color: #000;
   font-family: "Fredoka One", cursive;
 }
 form .submitButton {
@@ -342,7 +350,7 @@ form .submitButton {
   justify-content: center;
   align-items: center;
   border: 2px solid rgba(25, 54, 37, 0.568627451);
-  font-family: "Open Sans", sans-serif;
+  font-family: "Fredoka One", cursive;
   cursor: pointer;
 }
 
@@ -356,7 +364,7 @@ form .submitButton {
   padding-top: 28px;
 }
 .food p {
-  color: #6b2718;
+  color: #000;
   font-weight: bold;
   padding: 10px;
 }
@@ -384,6 +392,7 @@ form .submitButton {
 .foodSection .foodWrapper .foodTitle {
   text-transform: uppercase;
   font-size: 25px;
+  font-family: "Fredoka One", cursive;
   padding: 15px 0;
 }
 .foodSection .foodWrapper .fa-pause-circle {

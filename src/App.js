@@ -209,7 +209,7 @@ function App() {
               handleChange={handleChange}
               handleSubmit={handleSubmit}
             />
-            <p>Hey parents! Enter the sweet treat your kids are craving into the search form above, and we’ll replay with a healthy alternative tout suite!</p>
+            <p>Hey parents! Enter the sweet treat your kids are craving into the search form above, and we’ll reply with a healthy alternative tout suite!</p>
             <div className="mainButtons">
 
               {/* LINK TO SAVED PAIRS */}

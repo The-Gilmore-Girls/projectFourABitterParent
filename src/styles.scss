@@ -244,7 +244,7 @@ $font-secondary: 'Open Sans', sans-serif;
 // COLORS
 
 $color-green: #5cbecf;
-$color-purple: #dce92c;
+$color-yellow: #dce92c;
 $color-orange: #f08e0d;
 
 html {
@@ -258,7 +258,7 @@ html {
 }
 
 .header {
-  background-color: $color-purple;
+  background-color: $color-yellow;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -282,6 +282,13 @@ html {
 
 .search {
   background-color: $color-green;
+  padding: 48px 0;
+  p {
+    font-family: $font-primary;
+    font-size: 1.2rem;
+    text-align: center;
+    padding: 12px 44px;
+  }
 }
 
 form {
@@ -291,12 +298,13 @@ form {
   align-items: center;
   padding: 30px 30px;
   input {
-    border: 3px solid #19362591;
+    border: 6px solid #000;
     border-radius: 4px 25px;
     background-color: #fff;
     padding: 14px 34px;
+    margin: 28px 0;
     text-align: center;
-    color: #5a5a5a;
+    color: #000;
     font-family: $font-primary;
   }
   .submitButton {
@@ -310,7 +318,7 @@ form {
     justify-content: center;
     align-items: center;
     border: 2px solid #19362591;
-    font-family: $font-secondary;
+    font-family: $font-primary;
     cursor: pointer;
   }
 }
@@ -324,7 +332,7 @@ form {
   text-align: center;
   padding-top: 28px;
   p {
-    color: #6b2718;
+    color: #000;
     font-weight: bold;
     padding: 10px;
     span {
@@ -353,6 +361,7 @@ form {
     .foodTitle {
       text-transform: uppercase;
       font-size: 25px;
+      font-family: $font-primary;
       padding: 15px 0;
     }
 
@@ -369,7 +378,6 @@ form {
     display: flex;
     justify-content: space-around;
     height: 60%;
-
     .foodButton {
       width: 150px;
       margin-bottom: 10px;
@@ -492,7 +500,7 @@ ul {
 }
 
 .footer {
-  background-color: $color-purple;
+  background-color: $color-yellow;
   text-align: center;
 }
 
