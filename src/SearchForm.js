@@ -13,7 +13,7 @@ const SearchForm = (props) => {
           required
         />
         <button type="submit" className="submitButton">
-          Submit
+          SUBMIT
         </button>
       </form>
     </>

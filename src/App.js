@@ -214,11 +214,11 @@ function App() {
 
               {/* LINK TO SAVED PAIRS */}
               <Link className="pairsLink" to="/savedPairs">
-                <button className="foodButton">View Saved Pairs</button>
+                <button className="foodButton">VIEW SAVED PAIRS</button>
               </Link>
 
               <button className="foodButton" onClick={onClear}>
-                Clear
+                CLEAR
               </button>
             </div>
           </section>

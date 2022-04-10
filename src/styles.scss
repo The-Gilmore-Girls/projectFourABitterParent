@@ -243,7 +243,7 @@ $font-secondary: 'Open Sans', sans-serif;
 
 // COLORS
 
-$color-green: #5cbecf;
+$color-green: #41d4ee;
 $color-yellow: #dce92c;
 $color-orange: #f08e0d;
 
@@ -297,8 +297,11 @@ form {
   justify-content: center;
   align-items: center;
   padding: 30px 30px;
+  background-color: rgba(0, 0, 0, 0.281);
+  margin: 0 28px;
+  border-radius: 25px;
   input {
-    border: 6px solid #000;
+    border: 4px solid #000;
     border-radius: 4px 25px;
     background-color: #fff;
     padding: 14px 34px;
@@ -306,18 +309,19 @@ form {
     text-align: center;
     color: #000;
     font-family: $font-primary;
+    width: 65%;
   }
   .submitButton {
     font-style: none;
-    background-color: #53c27f;
+    background-color: $color-yellow;
     margin-top: 6px;
     padding: 6px 18px;
     border-radius: 12px;
-    color: rgb(34, 34, 34);
+    color: #000;
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 2px solid #19362591;
+    border: 4px solid #000;
     font-family: $font-primary;
     cursor: pointer;
   }
@@ -390,7 +394,7 @@ form {
       display: flex;
       justify-content: center;
       align-items: center;
-      border: 2px solid #19362591;
+      border: 4px solid #000;
       font-family: $font-secondary;
       cursor: pointer;
     }
@@ -481,7 +485,7 @@ ul {
     width: 220px;
     margin-bottom: 10px;
     font-style: none;
-    background-color: #53c27f;
+    background-color: $color-yellow;
     margin-top: 6px;
     padding: 6px 18px;
     border-radius: 12px;
@@ -489,8 +493,8 @@ ul {
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 2px solid #19362591;
-    font-family: $font-secondary;
+    border: 4px solid #000;
+    font-family: $font-primary;
     cursor: pointer;
   }
 }
